@@ -1,0 +1,662 @@
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Prompt", sans-serif;
+    background: #fff8fa;
+    color: #703746;
+}
+
+:root {
+    --pink: #e88ca3;
+    --dark-pink: #b84f6b;
+    --light-pink: #fff0f4;
+    --gold: #c69a61;
+    --dark: #87394f;
+    --border: #efd2db;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(255,255,255,.95);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    letter-spacing: 4px;
+
+    color: var(--dark);
+}
+
+.logo span {
+    display: block;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #6e414d;
+
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+.cart {
+    position: relative;
+
+    font-size: 20px;
+}
+
+#cartCount {
+    position: absolute;
+
+    top: -8px;
+    right: -10px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: var(--dark-pink);
+
+    color: white;
+
+    font-size: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 520px;
+
+    background:
+        radial-gradient(circle at 80% 30%, #ffdce6, transparent 30%),
+        linear-gradient(135deg,#fffafa,#fde9ee);
+
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+
+    min-height: 520px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.tag {
+    border: 1px solid #e9b6c5;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: var(--dark-pink);
+}
+
+.hero h1 {
+    margin-top: 20px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(60px,8vw,100px);
+
+    letter-spacing: 5px;
+
+    color: #a43e58;
+}
+
+.hero h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    letter-spacing: 8px;
+
+    color: var(--gold);
+}
+
+.hero p {
+    margin: 15px 0 25px;
+
+    color: #80525e;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn,
+.set-card button {
+    display: inline-block;
+
+    padding: 11px 25px;
+
+    border: 0;
+
+    border-radius: 30px;
+
+    background: var(--dark-pink);
+
+    color: white;
+
+    cursor: pointer;
+
+    margin-right: 8px;
+
+    text-decoration: none;
+}
+
+.outline {
+    background: white;
+
+    color: var(--dark-pink);
+
+    border: 1px solid var(--pink);
+}
+
+
+/* ================= HERO CIRCLE ================= */
+
+.hero-circle {
+    position: absolute;
+
+    right: 10%;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #fff0f4,
+        #e990a7
+    );
+
+    border: 2px solid #d5ae79;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-circle b {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    letter-spacing: 5px;
+
+    color: var(--dark);
+}
+
+.hero-circle small {
+    color: var(--gold);
+
+    letter-spacing: 5px;
+}
+
+
+/* ================= SECTION ================= */
+
+section {
+    padding: 70px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.title small {
+    color: var(--gold);
+
+    letter-spacing: 3px;
+}
+
+.title h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    color: var(--dark);
+
+    margin: 5px 0;
+}
+
+.title p {
+    color: #926b75;
+}
+
+
+/* ================= CATEGORY ================= */
+
+.categories {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.categories button {
+    border: 1px solid #e8bdc9;
+
+    background: white;
+
+    color: var(--dark-pink);
+
+    border-radius: 30px;
+
+    padding: 8px 18px;
+
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background: var(--dark-pink);
+
+    color: white;
+}
+
+
+/* ================= PRODUCTS ================= */
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(200px,1fr));
+
+    gap: 20px;
+}
+
+.product {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(130,50,70,.08);
+
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+}
+
+.product-img {
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff0f4;
+}
+
+.product-img span {
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    color: #b5526b;
+
+    text-align: center;
+}
+
+.product-info {
+    padding: 18px;
+
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+.price {
+    color: #d35b76;
+
+    font-size: 20px;
+
+    margin: 8px 0;
+}
+
+.old {
+    font-size: 12px;
+
+    color: #aaa;
+
+    text-decoration: line-through;
+}
+
+.product-info button {
+    width: 100%;
+
+    border: 0;
+
+    padding: 9px;
+
+    border-radius: 20px;
+
+    background: #f7dce4;
+
+    color: var(--dark-pink);
+
+    cursor: pointer;
+}
+
+
+/* ================= SET ================= */
+
+.pink-section {
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f4,
+            #fffafa
+        );
+}
+
+.sets {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.set-card {
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(130,50,70,.08);
+}
+
+.set-card > span {
+    color: var(--gold);
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+}
+
+.set-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    color: var(--dark);
+
+    margin: 5px 0 15px;
+}
+
+.set-card ul {
+    list-style: none;
+
+    line-height: 2;
+}
+
+.set-card h4 {
+    color: #d35b76;
+
+    font-size: 25px;
+
+    margin: 15px 0;
+}
+
+.set-card del {
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* ================= LOGIC ================= */
+
+.logic {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 15px;
+}
+
+.logic > div {
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: #fff5f7;
+
+    border: 1px solid var(--border);
+}
+
+.logic strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    color: var(--dark-pink);
+}
+
+.logic h3 {
+    margin: 8px 0;
+
+    color: var(--dark);
+}
+
+.logic p {
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #80616a;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    background: #fff0f4;
+}
+
+.about-box {
+    width: 85%;
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 1px solid var(--border);
+}
+
+.about-box h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 35px;
+
+    color: var(--dark);
+
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    line-height: 2;
+
+    color: #805b64;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c8617c,
+            #a9445e
+        );
+}
+
+footer h3 {
+    font-family: "Playfair Display", serif;
+
+    letter-spacing: 4px;
+}
+
+footer p {
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-circle {
+        opacity: .3;
+
+        right: -80px;
+    }
+
+    .sets {
+        grid-template-columns: 1fr;
+    }
+
+    .logic {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:500px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .logic {
+        grid-template-columns: 1fr;
+    }
+}
