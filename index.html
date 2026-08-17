@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BODYMASK PATTY | Luxury Body Care</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Prompt", sans-serif;
+            background: #fff8fa;
+            color: #743747;
+        }
+
+        :root {
+            --pink-light: #fff1f5;
+            --pink: #e98ca2;
+            --pink-dark: #b64f6b;
+            --rose: #91384f;
+            --gold: #c69a61;
+            --cream: #fffafa;
+            --text: #653441;
+            --border: #f1d4dc;
+            --shadow: 0 10px 30px rgba(143, 59, 83, 0.10);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255, 250, 251, 0.95);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid #f3d8df;
+        }
+
+        .navbar {
+            width: min(1200px, 92%);
+            margin: auto;
+
+            min-height: 82px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 4px;
+
+            color: var(--rose);
+        }
+
+        .logo span {
+            display: block;
+            text-align: center;
+
+            font-family: "Prompt", sans-serif;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: var(--gold);
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--pink-dark);
+        }
+
+        .cart {
+            position: relative;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -9px;
+            right: -12px;
+
+            width: 19px;
+            height: 19px;
+
+            border-radius: 50%;
+
+            background: var(--pink-dark);
+            color: white;
+
+            font-size: 11px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 540px;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 80% 30%, #ffdbe5 0%, transparent 30%),
+                radial-gradient(circle at 70% 90%, #ffe9ef 0%, transparent 35%),
+                linear-gradient(135deg, #fff9fa, #fde9ee);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+
+            width: 700px;
+            height: 700px;
+
+            right: -180px;
+            top: -200px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(198,154,97,.35);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            right: -40px;
+            top: -100px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(198,154,97,.25);
+        }
+
+        .hero-content {
+            width: min(1200px, 92%);
+            margin: auto;
+
+            min-height: 540px;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            max-width: 620px;
+        }
+
+        .small-title {
+            display: inline-block;
+
+            padding: 8px 18px;
+
+            border: 1px solid #efb8c7;
+            border-radius: 30px;
+
+            font-size: 12px;
+            letter-spacing: 3px;
+
+            color: var(--pink-dark);
+
+            background: rgba(255,255,255,.55);
+        }
+
+        .hero h1 {
+            margin-top: 18px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(60px, 8vw, 105px);
+            line-height: .9;
+
+            letter-spacing: 5px;
+
+            color: #a33f59;
+        }
+
+        .hero h2 {
+            margin-top: 12px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 32px;
+            letter-spacing: 9px;
+
+            color: var(--gold);
+        }
+
+        .hero p {
+            margin-top: 18px;
+
+            color: #80515d;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            padding: 13px 27px;
+
+            border-radius: 30px;
+
+            border: 1px solid var(--pink);
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #d96c87, #b64f6b);
+            color: white;
+
+            box-shadow: 0 10px 20px rgba(182,79,107,.2);
+        }
+
+        .btn-outline {
+            background: rgba(255,255,255,.7);
+            color: var(--pink-dark);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .hero-circle {
+            position: absolute;
+
+            right: 10%;
+            top: 80px;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(circle at 35% 25%, #fff, transparent 12%),
+                linear-gradient(145deg, #ffe9ef, #e991a7);
+
+            box-shadow:
+                inset 0 0 30px rgba(255,255,255,.8),
+                0 20px 50px rgba(160,60,90,.15);
+
+            border: 2px solid rgba(198,154,97,.6);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .hero-circle-text {
+            font-family: "Playfair Display", serif;
+            color: #a33f59;
+        }
+
+        .hero-circle-text strong {
+            display: block;
+            font-size: 32px;
+            letter-spacing: 5px;
+        }
+
+        .hero-circle-text span {
+            font-size: 13px;
+            letter-spacing: 5px;
+            color: var(--gold);
+        }
+
+
+        /* =========================================
+           SECTION
+        ========================================= */
+
+        section {
+            padding: 75px 0;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title small {
+            color: var(--gold);
+            letter-spacing: 4px;
+        }
+
+        .section-title h2 {
+            margin-top: 5px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 38px;
+
+            color: var(--rose);
+        }
+
+        .section-title p {
+            margin-top: 8px;
+            color: #9b6a75;
+        }
+
+
+        /* =========================================
+           CATEGORY
+        ========================================= */
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 35px;
+        }
+
+        .category-btn {
+            padding: 9px 20px;
+
+            border-radius: 30px;
+
+            border: 1px solid #e8bdc9;
+
+            background: white;
+
+            color: var(--pink-dark);
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--pink-dark);
+            color: white;
+        }
+
+
+        /* =========================================
+           PRODUCTS
+        ========================================= */
+
+        .products {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(210px, 1fr));
+
+            gap: 22px;
+        }
+
+        .product-card {
+            background: rgba(255,255,255,.9);
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow: var(--shadow);
+
+            transition: .35s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 40px rgba(143,59,83,.16);
+        }
+
+        .product-image {
+            height: 250px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            background:
+                radial-gradient(circle at 50% 30%, #fff, #fff0f4);
+        }
+
+        .discount {
+            position: absolute;
+
+            top: 12px;
+            left: 12px;
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            background: #b64f6b;
+            color: white;
+
+            font-size: 11px;
+        }
+
+        /* Product mockup */
+
+        .mock-product {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tube {
+            width: 80px;
+            height: 170px;
+
+            border-radius: 13px 13px 8px 8px;
+
+            background: linear-gradient(90deg,#f6b5c4,#fff0f3,#ef9fb2);
+
+            border: 1px solid #e7a4b4;
+
+            box-shadow: 0 15px 20px rgba(130,50,70,.12);
+        }
+
+        .tube::after {
+            content: "BODYMASK\A PATTY";
+            white-space: pre;
+
+            text-align: center;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 9px;
+            letter-spacing: 1px;
+
+            color: #a33f59;
+
+            position: absolute;
+
+            top: 60px;
+            left: 13px;
+        }
+
+        .jar {
+            width: 125px;
+            height: 75px;
+
+            border-radius: 10px 10px 22px 22px;
+
+            background: linear-gradient(135deg,#f6a9bb,#fff0f3,#e991a7);
+
+            border: 1px solid #e2a1b0;
+
+            box-shadow: 0 15px 20px rgba(130,50,70,.12);
+
+            position: relative;
+        }
+
+        .jar::before {
+            content: "";
+
+            position: absolute;
+
+            width: 130px;
+            height: 20px;
+
+            left: -3px;
+            top: -12px;
+
+            border-radius: 20px;
+
+            background: linear-gradient(90deg,#bd814c,#f5d3a0,#a96d39);
+        }
+
+        .jar::after {
+            content: "BODYMASK";
+
+            position: absolute;
+
+            top: 30px;
+            left: 30px;
+
+            font-family: "Playfair Display", serif;
+
+            color: #a33f59;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .bottle {
+            width: 85px;
+            height: 165px;
+
+            border-radius: 20px 20px 10px 10px;
+
+            background: linear-gradient(90deg,#e98ca2,#fff0f4,#e78ba1);
+
+            border: 1px solid #d98b9e;
+
+            position: relative;
+
+            box-shadow: 0 15px 20px rgba(130,50,70,.12);
+        }
+
+        .bottle::before {
+            content: "";
+
+            position: absolute;
+
+            width: 20px;
+            height: 35px;
+
+            top: -32px;
+            left: 31px;
+
+            background: linear-gradient(90deg,#a96d39,#e8c28e,#a96d39);
+
+            border-radius: 4px 4px 0 0;
+        }
+
+        .bottle::after {
+            content: "BODY\A MASK";
+
+            white-space: pre;
+
+            position: absolute;
+
+            top: 65px;
+            left: 22px;
+
+            text-align: center;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 11px;
+
+            color: #a33f59;
+        }
+
+        .set-box {
+            width: 190px;
+            height: 145px;
+
+            background: linear-gradient(135deg,#f8b8c6,#ffe7ed);
+
+            border: 1px solid #e2a3b2;
+
+            border-radius: 4px;
+
+            position: relative;
+
+            box-shadow: 0 15px 25px rgba(130,50,70,.12);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .set-box .tube {
+            width: 35px;
+            height: 80px;
+        }
+
+        .set-box .jar {
+            width: 55px;
+            height: 34px;
+        }
+
+        .set-box .jar::before {
+            width: 58px;
+            height: 8px;
+            top: -5px;
+        }
+
+        .set-box .bottle {
+            width: 35px;
+            height: 85px;
+        }
+
+        .set-box .bottle::before {
+            width: 10px;
+            height: 18px;
+            top: -16px;
+            left: 12px;
+        }
+
+        .product-info {
+            padding: 18px;
+
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .product-info .category {
+            margin-top: 5px;
+
+            font-size: 11px;
+
+            color: #b28b94;
+        }
+
+        .price {
+            margin-top: 8px;
+
+            font-size: 20px;
+
+            font-weight: 600;
+
+            color: #d55d78;
+        }
+
+        .old-price {
+            margin-left: 5px;
+
+            font-size: 13px;
+
+            color: #b99da3;
+
+            text-decoration: line-through;
+        }
+
+        .add-btn {
+            width: 100%;
+
+            margin-top: 12px;
+
+            padding: 10px;
+
+            border: 0;
+
+            border-radius: 25px;
+
+            background: #f8dce4;
+
+            color: #9d4158;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .add-btn:hover {
+            background: var(--pink-dark);
+            color: white;
+        }
+
+
+        /* =========================================
+           SET SECTION
+        ========================================= */
+
+        .set-section {
+            background:
+                linear-gradient(135deg,#fff3f6,#fffafb);
+        }
+
+        .sets {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+        .set-card {
+            padding: 35px;
+
+            border: 1px solid #efd2da;
+
+            border-radius: 18px;
+
+            background: rgba(255,255,255,.8);
+
+            box-shadow: var(--shadow);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .set-card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background: #fde1e8;
+
+            right: -80px;
+            top: -80px;
+        }
+
+        .set-label {
+            color: var(--gold);
+
+            font-size: 12px;
+
+            letter-spacing: 4px;
+        }
+
+        .set-card h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 34px;
+
+            color: var(--rose);
+
+            margin: 5px 0 10px;
+        }
+
+        .set-card ul {
+            list-style: none;
+
+            line-height: 2;
+
+            color: #80515d;
+        }
+
+        .set-price {
+            margin-top: 20px;
+
+            font-size: 28px;
+
+            color: #d45874;
+        }
+
+
+        /* =========================================
+           SET THEORY
+        ========================================= */
+
+        .logic-section {
+            background: #fff;
+        }
+
+        .logic-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .logic-card {
+            padding: 25px;
+
+            border: 1px solid #efd4db;
+
+            border-radius: 15px;
+
+            background: #fff8fa;
+
+            transition: .3s;
+        }
+
+        .logic-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .logic-symbol {
+            font-family: "Playfair Display", serif;
+
+            font-size: 32px;
+
+            color: var(--pink-dark);
+        }
+
+        .logic-card h3 {
+            margin: 10px 0;
+
+            color: var(--rose);
+        }
+
+        .logic-card p {
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            color: #80616a;
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about {
+            background:
+                linear-gradient(135deg,#fff0f4,#fffafb);
+        }
+
+        .about-box {
+            max-width: 850px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 45px;
+
+            border: 1px solid #eed2da;
+
+            border-radius: 20px;
+
+            background: rgba(255,255,255,.7);
+
+            box-shadow: var(--shadow);
+        }
+
+        .about-box h2 {
+            font-family: "Playfair Display", serif;
+
+            color: var(--rose);
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            line-height: 2;
+
+            color: #805b64;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: linear-gradient(135deg,#c9617c,#a94560);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        footer .footer-logo {
+            font-family: "Playfair Display", serif;
+
+            font-size: 25px;
+
+            letter-spacing: 4px;
+        }
+
+        footer p {
+            margin-top: 7px;
+
+            font-size: 12px;
+
+            opacity: .85;
+        }
+
+
+        /* =========================================
+           MODAL
+        ========================================= */
+
+        .modal {
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(70,20,35,.45);
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            z-index: 2000;
+
+            padding: 20px;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-box {
+            width: min(500px, 100%);
+
+            background: white;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            box-shadow: 0 30px 80px rgba(70,20,35,.25);
+        }
+
+        .modal-box h2 {
+            font-family: "Playfair Display", serif;
+
+            color: var(--rose);
+
+            font-size: 30px;
+        }
+
+        .modal-box p {
+            margin-top: 12px;
+
+            line-height: 1.8;
+
+            color: #805b64;
+        }
+
+        .close-modal {
+            margin-top: 20px;
+
+            padding: 10px 25px;
+
+            border: 0;
+
+            border-radius: 30px;
+
+            background: var(--pink-dark);
+
+            color: white;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media(max-width: 900px) {
+
+            .hero-circle {
+                opacity: .35;
+                right: -100px;
+            }
+
+            .logic-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .sets {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                gap: 12px;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .navbar {
+                min-height: 70px;
+            }
+
+            nav a:not(.cart) {
+                display: none;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero-circle {
+                width: 220px;
+                height: 220px;
+                right: -70px;
+                top: 300px;
+            }
+
+            .logic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sets {
+                grid-template-columns: 1fr;
+            }
+
+            .about-box {
+                padding: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="#" class="logo">
+            BODYMASK
+            <span>PATTY</span>
+        </a>
+
+        <nav>
+            <a href="#products">สินค้า</a>
+            <a href="#sets">SET A / SET B</a>
+            <a href="#logic">Set Logic</a>
+            <a href="#about">เกี่ยวกับเรา</a>
+
+            <div class="cart" onclick="openCart()">
+                🛍️
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <span class="small-title">
+                BODY CARE COLLECTION
+            </span>
+
+            <h1>BODYMASK</h1>
+
+            <h2>PATTY</h2>
+
+            <p>
+                ดูแลผิวกายของคุณให้เนียนนุ่ม
+                หอมละมุน และดูสุขภาพดี
+                ด้วย Body Care Collection
+                ที่ออกแบบมาเพื่อการดูแลผิวอย่างหรูหรา
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="btn btn-primary">
+                    เลือกซื้อสินค้า
+                </a>
+
+                <a href="#sets" class="btn btn-outline">
+                    ดูหมวดหมู่
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-circle">
+
+            <div class="hero-circle-text">
+
+                <strong>BODY</strong>
+
+                <strong>MASK</strong>
+
+                <span>PATTY</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRODUCTS
+========================================= -->
+
+<section id="products">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>OUR COLLECTION</small>
+
+            <h2>สินค้าแนะนำ</h2>
+
+            <p>
+                คัดสรรผลิตภัณฑ์ Body Care
+                สำหรับการดูแลผิวในทุกวัน
+            </p>
+
+        </div>
+
+
+        <!-- CATEGORY -->
+
+        <div class="categories">
+
+            <button
+                class="category-btn active"
+                onclick="filterProducts('all', this)">
+                ทั้งหมด
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('mask', this)">
+                Body Mask
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('scrub', this)">
+                Body Scrub
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('lotion', this)">
+                Body Lotion
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('set', this)">
+                Gift Set
+            </button>
+
+        </div>
+
+
+        <div class="products" id="productList"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SET A / SET B
+========================================= -->
+
+<section id="sets" class="set-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>LUXURY COLLECTION</small>
+
+            <h2>SET A / SET B</h2>
+
+            <p>
+                เลือกเซ็ตที่เหมาะกับสไตล์การดูแลผิวของคุณ
+            </p>
+
+        </div>
+
+
+        <div class="sets">
+
+
+            <!-- SET A -->
+
+            <div class="set-card">
+
+                <span class="set-label">
+                    SET A
+                </span>
+
+                <h3>Glow Set</h3>
+
+                <ul>
+                    <li>✓ Pink Glow Body Mask</li>
+                    <li>✓ Soft Skin Body Scrub</li>
+                    <li>✓ Moisture Body Lotion</li>
+                </ul>
+
+                <div class="set-price">
+                    ฿699
+                    <span class="old-price">฿847</span>
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="addToCart('SET A - Glow Set',699)">
+                    เพิ่มลงตะกร้า
+                </button>
+
+            </div>
+
+
+            <!-- SET B -->
+
+            <div class="set-card">
+
+                <span class="set-label">
+                    SET B
+                </span>
+
+                <h3>Premium Set</h3>
+
+                <ul>
+                    <li>✓ Pink Glow Body Mask</li>
+                    <li>✓ Soft Skin Body Scrub</li>
+                    <li>✓ Moisture Body Lotion</li>
+                    <li>✓ Premium Body Serum</li>
+                </ul>
+
+                <div class="set-price">
+                    ฿899
+                    <span class="old-price">฿1,136</span>
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="addToCart('SET B - Premium Set',899)">
+                    เพิ่มลงตะกร้า
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     DISCRETE MATHEMATICS / SET LOGIC
+========================================= -->
+
+<section id="logic" class="logic-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>DISCRETE MATHEMATICS</small>
+
+            <h2>Set Logic ของเว็บไซต์</h2>
+
+            <p>
+                การประยุกต์ใช้ Set Theory และ Logic
+                กับระบบสินค้า BODYMASK PATTY
+            </p>
+
+        </div>
+
+
+        <div class="logic-grid">
+
+
+            <!-- UNION -->
+
+            <div class="logic-card">
+
+                <div class="logic-symbol">
+                    A ∪ B
+                </div>
+
+                <h3>Union</h3>
+
+                <p>
+
+                    ใช้ในการรวมสินค้าของ
+                    SET A และ SET B
+
+                    <br><br>
+
+                    SET A ∪ SET B
+                    =
+                    สินค้าทั้งหมดที่อยู่ใน
+                    SET A หรือ SET B
+
+                </p>
+
+            </div>
+
+
+            <!-- DIFFERENCE -->
+
+            <div class="logic-card">
+
+                <div class="logic-symbol">
+                    A − B
+                </div>
+
+                <h3>Difference</h3>
+
+                <p>
+
+                    ใช้หาสินค้าที่อยู่ใน
+                    SET A แต่ไม่อยู่ใน SET B
+
+                    <br><br>
+
+                    ตัวอย่างเช่น
+                    สินค้า Exclusive
+                    ของ SET A
+
+                </p>
+
+            </div>
+
+
+            <!-- INTERSECTION -->
+
+            <div class="logic-card">
+
+                <div class="logic-symbol">
+                    A ∩ B
+                </div>
+
+                <h3>Intersection</h3>
+
+                <p>
+
+                    ใช้หาสินค้าที่มีอยู่ร่วมกัน
+                    ใน SET A และ SET B
+
+                    <br><br>
+
+                    เช่น Body Mask
+                    และ Body Scrub
+
+                    ที่อยู่ในทั้งสองเซ็ต
+
+                </p>
+
+            </div>
+
+
+            <!-- IF ELSE -->
+
+            <div class="logic-card">
+
+                <div class="logic-symbol">
+                    IF / ELSE
+                </div>
+
+                <h3>เงื่อนไข</h3>
+
+                <p>
+
+                    ใช้ตรวจสอบเงื่อนไข
+                    การลดราคาและการแนะนำสินค้า
+
+                    <br><br>
+
+                    ถ้าซื้อ SET
+                    → ได้ราคาพิเศษ
+
+                    <br>
+
+                    ถ้าไม่ซื้อ SET
+                    → แสดงราคาปกติ
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="about-box">
+
+            <h2>About BODYMASK PATTY</h2>
+
+            <p>
+
+                BODYMASK PATTY คือแบรนด์ผลิตภัณฑ์ดูแลผิวกาย
+                ที่เน้นความหรูหรา อ่อนโยน และใช้งานง่าย
+
+                <br><br>
+
+                เว็บไซต์นี้ออกแบบด้วยโทนสีชมพู
+                Rose Gold และ Cream
+                เพื่อสื่อถึงความหรูหราและความอ่อนโยน
+
+                <br><br>
+
+                ระบบเว็บไซต์ยังประยุกต์แนวคิด
+                คณิตศาสตร์ดิสครีต โดยเฉพาะ
+                Set Theory และ Logic
+                เพื่อจัดการหมวดหมู่สินค้า
+                Set A / Set B
+                การแนะนำสินค้า และโปรโมชั่น
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        BODYMASK PATTY
+    </div>
+
+    <p>
+        © 2024 BODYMASK PATTY.
+        All rights reserved.
+    </p>
+
+    <p>
+        Luxury Body Care Collection
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================
+     CART MODAL
+========================================= -->
+
+<div class="modal" id="cartModal">
+
+    <div class="modal-box">
+
+        <h2>🛍️ ตะกร้าสินค้า</h2>
+
+        <p id="cartText">
+            ยังไม่มีสินค้าในตะกร้า
+        </p>
+
+        <button
+            class="close-modal"
+            onclick="closeCart()">
+            ปิด
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* =========================================
+   PRODUCT DATABASE
+========================================= */
+
+const products = [
+
+    {
+        id: 1,
+        name: "Pink Glow Body Mask",
+        category: "mask",
+        price: 299,
+        oldPrice: 349,
+        discount: 15,
+        type: "tube"
+    },
+
+    {
+        id: 2,
+        name: "Soft Skin Body Scrub",
+        category: "scrub",
+        price: 259,
+        oldPrice: 299,
+        discount: 13,
+        type: "jar"
+    },
+
+    {
+        id: 3,
+        name: "Moisture Body Lotion",
+        category: "lotion",
+        price: 289,
+        oldPrice: 329,
+        discount: 12,
+        type: "bottle"
+    },
+
+    {
+        id: 4,
+        name: "SET A - Glow Set",
+        category: "set",
+        price: 699,
+        oldPrice: 847,
+        discount: 17,
+        type: "set"
+    },
+
+    {
+        id: 5,
+        name: "SET B - Premium Set",
+        category: "set",
+        price: 899,
+        oldPrice: 1136,
+        discount: 21,
+        type: "set"
+    }
+
+];
+
+
+/* =========================================
+   CART
+========================================= */
+
+let cart = [];
+
+
+
+/* =========================================
+   DISPLAY PRODUCTS
+========================================= */
+
+function displayProducts(data) {
+
+    const productList =
+        document.getElementById("productList");
+
+    productList.innerHTML = "";
+
+
+    data.forEach(product => {
+
+        let visual = "";
+
+
+        if (product.type === "tube") {
+
+            visual = `
+                <div class="mock-product">
+                    <div class="tube"></div>
+                </div>
+            `;
+
+        }
+
+        else if (product.type === "jar") {
+
+            visual = `
+                <div class="mock-product">
+                    <div class="jar"></div>
+                </div>
+            `;
+
+        }
+
+        else if (product.type === "bottle") {
+
+            visual = `
+                <div class="mock-product">
+                    <div class="bottle"></div>
+                </div>
+            `;
+
+        }
+
+        else {
+
+            visual = `
+                <div class="mock-product">
+                    <div class="set-box">
+
+                        <div class="tube"></div>
+                        <div class="jar"></div>
+                        <div class="bottle"></div>
+
+                    </div>
+                </div>
+            `;
+
+        }
+
+
+        productList.innerHTML += `
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="discount">
+                        -${product.discount}%
+                    </span>
+
+                    ${visual}
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        ${product.name}
+                    </h3>
+
+                    <div class="category">
+                        ${getCategoryName(product.category)}
+                    </div>
+
+                    <div class="price">
+
+                        ฿${product.price}
+
+                        <span class="old-price">
+                            ฿${product.oldPrice}
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="add-btn"
+                        onclick="addToCart('${product.name}', ${product.price})">
+
+                        เพิ่มลงตะกร้า
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* =========================================
+   CATEGORY NAME
+========================================= */
+
+function getCategoryName(category) {
+
+    const names = {
+
+        mask: "BODY MASK",
+
+        scrub: "BODY SCRUB",
+
+        lotion: "BODY LOTION",
+
+        set: "GIFT SET"
+
+    };
+
+    return names[category] || "BODY CARE";
+
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+function filterProducts(category, button) {
+
+    document
+        .querySelectorAll(".category-btn")
+        .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+
+    if (category === "all") {
+
+        displayProducts(products);
+
+    }
+
+    else {
+
+        const result =
+            products.filter(
+                product =>
+                product.category === category
+            );
+
+        displayProducts(result);
+
+    }
+
+}
+
+
+/* =========================================
+   ADD TO CART
+========================================= */
+
+function addToCart(name, price) {
+
+    cart.push({
+        name: name,
+        price: price
+    });
+
+
+    document.getElementById("cartCount")
+        .textContent = cart.length;
+
+
+    alert(
+        `เพิ่ม ${name} ลงตะกร้าแล้ว\nราคา ฿${price}`
+    );
+
+}
+
+
+/* =========================================
+   CART
+========================================= */
+
+function openCart() {
+
+    const modal =
+        document.getElementById("cartModal");
+
+    const cartText =
+        document.getElementById("cartText");
+
+
+    if (cart.length === 0) {
+
+        cartText.innerHTML =
+            "ยังไม่มีสินค้าในตะกร้า";
+
+    }
+
+    else {
+
+        let total = 0;
+
+        let html = "<strong>สินค้าในตะกร้า</strong><br><br>";
+
+
+        cart.forEach((item, index) => {
+
+            total += item.price;
+
+            html += `
+                ${index + 1}.
+                ${item.name}
+                — ฿${item.price}
+                <br>
+            `;
+
+        });
+
+
+        html += `
+            <br>
+            <strong>
+                รวมทั้งหมด ฿${total}
+            </strong>
+        `;
+
+
+        cartText.innerHTML = html;
+
+    }
+
+
+    modal.classList.add("show");
+
+}
+
+
+function closeCart() {
+
+    document
+        .getElementById("cartModal")
+        .classList.remove("show");
+
+}
+
+
+
+/* =========================================
+   SET THEORY
+========================================= */
+
+
+/*
+    SET A
+    ประกอบด้วยสินค้าที่อยู่ใน Glow Set
+*/
+
+const setA = new Set([
+    "Pink Glow Body Mask",
+    "Soft Skin Body Scrub",
+    "Moisture Body Lotion"
+]);
+
+
+/*
+    SET B
+    ประกอบด้วยสินค้าของ Premium Set
+*/
+
+const setB = new Set([
+    "Pink Glow Body Mask",
+    "Soft Skin Body Scrub",
+    "Moisture Body Lotion",
+    "Premium Body Serum"
+]);
+
+
+/*
+    UNION
+    A ∪ B
+
+    รวมสมาชิกของ SET A และ SET B
+*/
+
+function union(set1, set2) {
+
+    return new Set([
+        ...set1,
+        ...set2
+    ]);
+
+}
+
+
+/*
+    INTERSECTION
+    A ∩ B
+
+    หาสมาชิกที่อยู่ในทั้ง SET A
+    และ SET B
+*/
+
+function intersection(set1, set2) {
+
+    return new Set(
+        [...set1]
+        .filter(item => set2.has(item))
+    );
+
+}
+
+
+/*
+    DIFFERENCE
+    A - B
+
+    หาสินค้าที่อยู่ใน A
+    แต่ไม่อยู่ใน B
+*/
+
+function difference(set1, set2) {
+
+    return new Set(
+        [...set1]
+        .filter(item => !set2.has(item))
+    );
+
+}
+
+
+/* =========================================
+   DEMO SET THEORY
+========================================= */
+
+console.log("SET A =", [...setA]);
+
+console.log("SET B =", [...setB]);
+
+console.log(
+    "A UNION B =",
+    [...union(setA, setB)]
+);
+
+console.log(
+    "A INTERSECTION B =",
+    [...intersection(setA, setB)]
+);
+
+console.log(
+    "A DIFFERENCE B =",
+    [...difference(setA, setB)]
+);
+
+
+/* =========================================
+   IF / ELSE LOGIC
+========================================= */
+
+
+/*
+    ระบบตรวจสอบโปรโมชั่น
+
+    ถ้าซื้อ SET
+    → ลดราคา
+
+    ถ้าไม่ซื้อ SET
+    → ราคาปกติ
+*/
+
+function calculatePrice(product) {
+
+    if (product.category === "set") {
+
+        return product.price;
+
+    }
+
+    else {
+
+        return product.oldPrice;
+
+    }
+
+}
+
+
+/*
+    ระบบแนะนำสินค้า
+
+    ถ้าผู้ใช้เลือก Body Mask
+    → แนะนำ Body Scrub
+
+    ถ้าเลือก Body Scrub
+    → แนะนำ Body Lotion
+
+    ถ้าเลือกอย่างอื่น
+    → แนะนำ Set A
+*/
+
+function recommendProduct(category) {
+
+    if (category === "mask") {
+
+        return "แนะนำ: Soft Skin Body Scrub";
+
+    }
+
+    else if (category === "scrub") {
+
+        return "แนะนำ: Moisture Body Lotion";
+
+    }
+
+    else if (category === "lotion") {
+
+        return "แนะนำ: Pink Glow Body Mask";
+
+    }
+
+    else {
+
+        return "แนะนำ: SET A - Glow Set";
+
+    }
+
+}
+
+
+/* =========================================
+   START WEBSITE
+========================================= */
+
+displayProducts(products);
+
+</script>
+
+</body>
+</html>
